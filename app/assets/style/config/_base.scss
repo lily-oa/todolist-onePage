@@ -1,0 +1,14 @@
+a{
+  text-decoration: none;
+  vertical-align: middle;
+  &:hover{
+    color: $white;
+  }
+}
+
+body{
+  color: $body;
+  font-family: 'Noto Sans TC', sans-serif;
+  line-height: 1.5;
+
+}
