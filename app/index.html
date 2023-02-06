@@ -6,7 +6,7 @@ current: index
 ---
 
 <!--login-->
-<div class="login">
+<div class="login-page">
   <div class="container">
     <div class="row justify-content-center align-items-lg-end">
       <div class="col-12 col-lg-6 text-center d-flex flex-column align-items-center">
@@ -22,16 +22,16 @@ current: index
               <h1 class="fs-5 mt-6 fw-bold text-center mb-9 mb-lg-7">最實用的線上代辦事項服務</h1>
               <form>
                 <div class="mb-3">
-                  <label for="Email1" class="form-label">Email</label>
-                  <input type="email" class="form-control py-14" id="Email1" placeholder="請輸入Email"
+                  <label for="login-email" class="form-label">Email</label>
+                  <input type="email" class="form-control py-14" id="login-email" placeholder="請輸入Email"
                     aria-describedby="emailHelp">
                   <div id="emailHelp" class="text-warning fs-7 mt-1 invalid-feedback">請輸入正確Email</div>
                 </div>
 
                 <div class="mb-3">
-                  <label for="Password1" class="form-label">Password</label>
-                  <input type="password" class="form-control py-14" id="Password1" placeholder="請輸入密碼">
-                  <div id="password1" class="text-warning fs-7 mt-1 invalid-feedback">請正確輸入密碼</div>
+                  <label for="login-password" class="form-label">Password</label>
+                  <input type="password" class="form-control py-14" id="login-password" placeholder="請輸入密碼">
+                  <div id="passwordHelp" class="text-warning fs-7 mt-1 invalid-feedback">請正確輸入密碼</div>
                 </div>
               </form>
             </div>
@@ -46,7 +46,7 @@ current: index
               <button type="button" class="login_btn btn btn-dark p-2 px-10 mb-3 d-inline" data-bs-toggle="modal">
                 登入
               </button>
-              <a href="./signUp.html" class="text-dark text-center">註冊帳號</a>
+              <a href="./signUp.html" class="go-signup-btn text-dark text-center">註冊帳號</a>
               <span class="status_txt text-danger mb-16 mb-lg-15"></span>
             </div>
           </div>
@@ -75,3 +75,137 @@ current: index
 </div>
 
 <!--signup-->
+<div class="signup-page d-none">
+  <div class="container">
+    <div class="row justify-content-center align-items-lg-start">
+      <div class="col-12 col-lg-6 text-center d-flex flex-column align-items-center">
+        <img src="./assets/images/logo-1.png" alt="logo" class="d-black d-lg-none mt-11">
+        <img src="./assets/images/logo_lg-1.png" alt="logo_lg" class="d-none d-lg-block mt-lg-13 mb-6">
+        <img src="./assets/images/done.png" alt="done" class="d-none d-lg-block mb-13">
+      </div>
+      
+      <div class="col-12 col-md-9 col-lg-6">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col col-md-10">
+              <h1 class="fs-4 mt-4 mt-lg-12 fw-bold text-center text-lg-start mb-9 mb-lg-7">註冊帳號</h1>
+              <form>
+                <div class="mb-3">
+                  <label for="signup-email" class="form-label">Email</label>
+                  <input type="email" class="form-control py-14" id="signup-email" placeholder="請輸入Email" aria-describedby="signupEmailHelp">
+                  <div id="signupEmailHelp" class="text-warning fs-7 mt-1 invalid-feedback">請輸入正確Email</div>
+                </div>
+                <div class="mb-3">
+                  <label for="signup-nickname" class="form-label">暱稱</label>
+                  <input type="email" class="form-control py-14" id="signup-nickname" placeholder="請輸入暱稱" aria-describedby="nickHelp">
+                  <div id="nickHelp" class="text-warning fs-7 mt-1 invalid-feedback">請輸入暱稱</div>
+                </div>
+                <div class="mb-3">
+                  <label for="signup-password" class="form-label">Password</label>
+                  <input type="password" class="form-control py-14" id="signup-password" placeholder="請輸入密碼" aria-describedby="signupPasswordHelp">
+                  <div id="signupPasswordHelp" class="text-warning fs-7 mt-1 invalid-feedback">請設定6碼以上</div>
+                </div>
+                <div class="mb-3">
+                  <label for="signup-password2" class="form-label">請再次輸入密碼</label>
+                  <input type="password" class="form-control py-14" id="signup-password2" placeholder="請再次輸入密碼" aria-describedby="signupPassword2Help">
+                  <div id="signupPassword2Help" class="text-warning fs-7 mt-1 invalid-feedback">密碼不一致</div>
+                </div>
+              </form>
+                <div class="d-flex flex-column justify-content-center">
+                  <button type="submit" class="signup-btn btn btn-dark py-14 mx-auto px-12 mb-7 mt-7">註冊帳號</button>
+                  <a href="./index.html" class="go-login-btn text-dark text-center mb-16 mb-lg-15">登入</a>
+                  <span class="text-danger" class="signup_status_txt"></span>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="signup_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">系統提示</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="signup_alert_txt"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!--
+        <button type="button" class="btn btn-primary">Save changes</button>
+        -->
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!--addTodos-->
+<div class="addTodos addTodos-page d-none">
+  <header class="py-6">
+    <div class="container d-flex justify-content-around align-items-center justify-content-lg-between">
+      <img src="./assets/images/logo-1.png" class="d-block d-lg-none" alt="logo">
+      <img src="./assets/images/logo_lg-1.png" class="d-none d-lg-block" alt="logo">
+      <div class="div d-flex">
+        <span class="d-none d-lg-block me-7">的代辦事項</span>
+        <a href="" class="text-dark fs-7 fs-lg-6">登出</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-11 col-lg-6">
+          <form class="card d-flex flex-row align-items-center shadow mb-4">
+            <input type="text" placeholder="新增代辦事項" class="w-100 py-3 ps-3 border-0 rounded">
+            <button class="bg-white border-0" type="submit">
+              <img src="./assets/images/plus 1.png" alt="plus">
+            </button>
+          </form>
+          <!--如果沒有任何代辦事項顯示-->
+          <!--
+          <div class="empty text-center pb-16">
+            <h4 class="my-6 fs-5 fs-lg-4 my-lg-11 text-secondary">目前尚無代辨事項</h4>
+            <img src="./assets/images/empty.png" alt="empty">
+          </div>
+          -->
+
+          <!--如果沒有任何代辦事項隱藏-->
+          <div class="card card_list">
+            <ul class="tab d-flex">
+              <li class="active" data-tab="all">全部</li>
+              <li data-tab="work">待完成</li>
+              <li data-tab="done">已完成</li>
+            </ul>
+            <div class="card_content">
+
+              <ul class="list">
+                <li>
+                  <label for="" class="checkbox">
+                    <input type="checkbox">
+                    <span class="ps-4">123</span>
+                  </label>
+                  <a href="#" class="delete"></a>
+                </li>
+              </ul>
+              
+                <div class="list_footer d-flex justify-content-between">
+                  <p class="footer_p">
+                    <span class="todoLength">0</span> 個待完成項目
+                  </p>
+                  <a href="#" class="btn_clear">清除已完成項目</a>
+                </div>
+            </div>
+          </div><!--card_list end-->
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
