@@ -16595,8 +16595,8 @@ body {
 }
 
 /*-- pages --*/
-.login,
-.signup {
+.login-page,
+.signup-page {
   background: #FCD370;
 }
 
