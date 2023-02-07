@@ -185,22 +185,20 @@
               <img src="./assets/images/plus 1.png" alt="plus">
             </button>
           </form>
-          <!--如果沒有任何代辦事項顯示-->
-          <!--
+          <!--沒有代辦事項顯示這個-->
           <div class="empty text-center pb-16">
             <h4 class="my-6 fs-5 fs-lg-4 my-lg-11 text-secondary">目前尚無代辨事項</h4>
             <img src="./assets/images/empty.png" alt="empty">
           </div>
-          -->
 
-          <!--如果沒有任何代辦事項隱藏-->
-          <div class="card card_list">
+          <!--有代辦事項顯示這個-->
+          <div class="card card-list d-none">
             <ul class="tab d-flex">
               <li class="active" data-tab="all">全部</li>
               <li data-tab="work">待完成</li>
               <li data-tab="done">已完成</li>
             </ul>
-            <div class="card_content">
+            <div class="card-content">
 
               <ul class="list">
                 <li>
@@ -212,14 +210,15 @@
                 </li>
               </ul>
               
-                <div class="list_footer d-flex justify-content-between">
-                  <p class="footer_p">
+                <div class="list-footer d-flex justify-content-between">
+                  <p class="footer-p">
                     <span class="todoLength">0</span> 個待完成項目
                   </p>
-                  <a href="#" class="btn_clear">清除已完成項目</a>
+                  <a href="#" class="btn-clear">清除已完成項目</a>
                 </div>
             </div>
           </div><!--card_list end-->
+
         </div>
       </div>
     </div>
