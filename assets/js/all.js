@@ -19,7 +19,14 @@ var loginAlertTxt = document.querySelector('.login-alert-txt');
 var loginModal = document.querySelector('#login-modal');
 var callLoginModal = new bootstrap.Modal(loginModal, {});
 // 註冊頁 DOM------------------------------------
-
+var signUpEmail = document.querySelector('#signup-email');
+var signUpNickname = document.querySelector('#signup-nickname');
+var signUpPassword = document.querySelector('#signup-password');
+var signUpPassword2 = document.querySelector('#signup-password2');
+var signUpBtn = document.querySelector('.signup-btn');
+var goLoginBtn = document.querySelector('.go-login-btn');
+var signupModal = document.querySelector('#signup-modal');
+var callSignupModal = new bootstrap.Modal(signupModal, {});
 // addTodos內頁----------------------------------
 
 //登入頁----- //登入btn click事件
@@ -27,4 +34,42 @@ loginBtn.addEventListener('click', function (e) {
   e.preventDefault();
   console.log(123);
 });
+//註冊頁連結 click事件
+goLoginBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  signupPage.classList.remove('d-none');
+  loginPage.classList.add('d-none');
+});
+
+//-----------------API-------------------//
+//註冊API signUp()-------------
+function signUp(e, n, p) {
+  axios.post("".concat(apiUrl, "/users"), {
+    "user": {
+      "email": e,
+      "nickname": n,
+      "password": p
+    }
+  }).then(function (response) {
+    console.log(response);
+    loginPage.classList.remove('d-none');
+    signUpPage.classList.add('d-none');
+  })["catch"](function (error) {
+    console.log(error.response);
+  });
+}
+
+//登入API login()----------------
+function login(e, p) {
+  axios.post("".concat(apiUrl, "/users/sign_in"), {
+    "user": {
+      "email": e,
+      "password": p
+    }
+  }).then(function (response) {
+    console.log(response);
+  })["catch"](function (error) {
+    console.log(error.response);
+  });
+}
 //# sourceMappingURL=all.js.map
