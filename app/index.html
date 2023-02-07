@@ -112,9 +112,10 @@ current: index
                 </div>
               </form>
                 <div class="d-flex flex-column justify-content-center">
-                  <button type="submit" class="signup-btn btn btn-dark py-14 mx-auto px-12 mb-7 mt-7">註冊帳號</button>
+                  <!--data-bs-toggle="modal" 確定這一句是否需要-->
+                  <button type="submit" class="signup-btn btn btn-dark py-14 mx-auto px-12 mb-7 mt-7" data-bs-toggle="modal">註冊帳號</button>
                   <a href="./index.html" class="go-login-btn text-dark text-center mb-16 mb-lg-15">登入</a>
-                  <span class="text-danger" class="signup_status_txt"></span>
+                  <span class="text-danger" class="signup-status-txt"></span>
                 </div>
             </div>
           </div>
@@ -125,7 +126,7 @@ current: index
   </div>
 
   <!-- Modal -->
-<div class="modal fade" id="signup_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="signup-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -133,7 +134,7 @@ current: index
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p class="signup_alert_txt"></p>
+        <p class="signup-alert-txt"></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

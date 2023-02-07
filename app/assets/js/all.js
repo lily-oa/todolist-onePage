@@ -17,7 +17,14 @@ const loginAlertTxt= document.querySelector('.login-alert-txt');
 const loginModal = document.querySelector('#login-modal');
 const callLoginModal = new bootstrap.Modal(loginModal, {});
 // 註冊頁 DOM------------------------------------
-
+const signUpEmail = document.querySelector('#signup-email');
+const signUpNickname = document.querySelector('#signup-nickname');
+const signUpPassword = document.querySelector('#signup-password');
+const signUpPassword2 = document.querySelector('#signup-password2');
+const signUpBtn = document.querySelector('.signup-btn');
+const goLoginBtn = document.querySelector('.go-login-btn');
+const signupModal = document.querySelector('#signup-modal');
+const callSignupModal = new bootstrap.Modal(signupModal, {});
 // addTodos內頁----------------------------------
 
 
@@ -26,3 +33,47 @@ loginBtn.addEventListener('click', (e) => {
   e.preventDefault();
   console.log(123);
 })
+//註冊頁連結 click事件
+goLoginBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  signupPage.classList.remove('d-none');
+  loginPage.classList.add('d-none');
+})
+
+//-----------------API-------------------//
+//註冊API signUp()-------------
+function signUp(e, n, p){
+  axios.post(`${apiUrl}/users`, {
+    "user": {
+      "email": e,
+      "nickname": n,
+      "password": p
+    }
+  })
+    .then((response) => {
+      console.log(response);
+
+      loginPage.classList.remove('d-none');
+      signUpPage.classList.add('d-none');
+    })
+    .catch((error) => {
+      console.log(error.response)
+
+    })
+}
+
+//登入API login()----------------
+function login(e, p){
+  axios.post(`${apiUrl}/users/sign_in`, {
+    "user": {
+      "email": e,
+      "password": p
+    }
+  })
+    .then((response) => {
+      console.log(response)
+    })
+    .catch((error) => {
+      console.log(error.response)
+    })
+}
