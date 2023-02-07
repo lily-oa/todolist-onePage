@@ -32,7 +32,11 @@ var callSignupModal = new bootstrap.Modal(signupModal, {});
 //登入頁----- //登入btn click事件
 loginBtn.addEventListener('click', function (e) {
   e.preventDefault();
-  console.log(123);
+  var eValue = loginEmail.value;
+  var pValue = loginPassword.value;
+  if (eValue.trim() !== '' && pValue.trim() !== '') {
+    login(eValue, pValue);
+  }
 });
 //註冊頁連結 click事件
 goLoginBtn.addEventListener('click', function (e) {
