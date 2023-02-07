@@ -37,11 +37,13 @@ loginBtn.addEventListener('click', function (e) {
   if (eValue.trim() !== '' && pValue.trim() !== '') {
     login(eValue, pValue);
   }
+  signUpPage.classList.remove('d-none');
+  loginPage.classList.add('d-none');
 });
 //註冊頁連結 click事件
 goLoginBtn.addEventListener('click', function (e) {
   e.preventDefault();
-  signupPage.classList.remove('d-none');
+  signUpPage.classList.remove('d-none');
   loginPage.classList.add('d-none');
 });
 
