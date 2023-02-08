@@ -23,8 +23,8 @@ const signUpPassword = document.querySelector('#signup-password');
 const signUpPassword2 = document.querySelector('#signup-password2');
 const signUpBtn = document.querySelector('.signup-btn');
 const goLoginBtn = document.querySelector('.go-login-btn');
-const signupModal = document.querySelector('#signup-modal');
-const callSignupModal = new bootstrap.Modal(signupModal, {});
+//const signupModal = document.querySelector('#signup-modal');
+//const callSignupModal = new bootstrap.Modal(signupModal, {});
 // addTodos內頁----------------------------------
 
 
