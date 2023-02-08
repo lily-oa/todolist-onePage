@@ -25,8 +25,8 @@ var signUpPassword = document.querySelector('#signup-password');
 var signUpPassword2 = document.querySelector('#signup-password2');
 var signUpBtn = document.querySelector('.signup-btn');
 var goLoginBtn = document.querySelector('.go-login-btn');
-var signupModal = document.querySelector('#signup-modal');
-var callSignupModal = new bootstrap.Modal(signupModal, {});
+//const signupModal = document.querySelector('#signup-modal');
+//const callSignupModal = new bootstrap.Modal(signupModal, {});
 // addTodos內頁----------------------------------
 
 //登入頁----- //登入btn click事件
