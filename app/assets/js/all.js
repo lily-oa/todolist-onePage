@@ -14,8 +14,8 @@ const loginBtn= document.querySelector('#login-btn');
 const goSignUpBtn= document.querySelector('.go-signup-btn');
 const loginStatusTxt= document.querySelector('.login-status-txt');
 const loginAlertTxt= document.querySelector('.login-alert-txt');
-const loginModal = document.querySelector('#login-modal');
-const callLoginModal = new bootstrap.Modal(loginModal, {});
+//const loginModal = document.querySelector('#login-modal');
+//const callLoginModal = new bootstrap.Modal(loginModal, {});
 // 註冊頁 DOM------------------------------------
 const signUpEmail = document.querySelector('#signup-email');
 const signUpNickname = document.querySelector('#signup-nickname');
