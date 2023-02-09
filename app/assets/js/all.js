@@ -45,6 +45,11 @@ goLoginBtn.addEventListener('click', (e) => {
   signUpPage.classList.remove('d-none');
   loginPage.classList.add('d-none');
 })
+// signUpBtn.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   let eValue = signUpEmail.value
+
+// })
 
 //-----------------API-------------------//
 //註冊API signUp()-------------
