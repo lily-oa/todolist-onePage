@@ -29,16 +29,16 @@ const goLoginBtn = document.querySelector('.go-login-btn');
 
 
 //登入頁----- //登入btn click事件
-// loginBtn.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   let eValue = loginEmail.value;
-//   let pValue = loginPassword.value;
-//   if((eValue.trim() !== '') && (pValue.trim() !== '')){
-//     login(eValue, pValue);
-//   }
-//   signUpPage.classList.remove('d-none');
-//   loginPage.classList.add('d-none');
-// })
+loginBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  let eValue = loginEmail.value;
+  let pValue = loginPassword.value;
+  if((eValue.trim() !== '') && (pValue.trim() !== '')){
+    login(eValue, pValue);
+  }
+  signUpPage.classList.remove('d-none');
+  loginPage.classList.add('d-none');
+})
 //註冊頁連結 click事件
 goSignUpBtn.addEventListener('click', (e) => {
   e.preventDefault();
