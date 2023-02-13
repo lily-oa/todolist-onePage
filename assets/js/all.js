@@ -30,16 +30,16 @@ var goLoginBtn = document.querySelector('.go-login-btn');
 // addTodos內頁----------------------------------
 
 //登入頁----- //登入btn click事件
-// loginBtn.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   let eValue = loginEmail.value;
-//   let pValue = loginPassword.value;
-//   if((eValue.trim() !== '') && (pValue.trim() !== '')){
-//     login(eValue, pValue);
-//   }
-//   signUpPage.classList.remove('d-none');
-//   loginPage.classList.add('d-none');
-// })
+loginBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  var eValue = loginEmail.value;
+  var pValue = loginPassword.value;
+  if (eValue.trim() !== '' && pValue.trim() !== '') {
+    login(eValue, pValue);
+  }
+  signUpPage.classList.remove('d-none');
+  loginPage.classList.add('d-none');
+});
 //註冊頁連結 click事件
 goSignUpBtn.addEventListener('click', function (e) {
   e.preventDefault();
