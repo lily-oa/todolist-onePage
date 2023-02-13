@@ -1,7 +1,7 @@
 "use strict";
 
 var loginPage = document.querySelector('.login-page'); //登入畫面
-var signupPage = document.querySelector('.signup-page'); //註冊畫面
+var signupPage = document.querySelector('#signup-page'); //註冊畫面
 var addTodosPage = document.querySelector('.addTodos-page'); //內頁畫面
 var todoList = document.querySelector('.card-list'); //有代辦事項顯示這個
 var empty = document.querySelector('.empty'); //沒有代辦事項顯示這個
@@ -30,22 +30,23 @@ var goLoginBtn = document.querySelector('.go-login-btn');
 // addTodos內頁----------------------------------
 
 //登入頁----- //登入btn click事件
-loginBtn.addEventListener('click', function (e) {
-  e.preventDefault();
-  var eValue = loginEmail.value;
-  var pValue = loginPassword.value;
-  if (eValue.trim() !== '' && pValue.trim() !== '') {
-    login(eValue, pValue);
-  }
-  signUpPage.classList.remove('d-none');
-  loginPage.classList.add('d-none');
-});
+// loginBtn.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   let eValue = loginEmail.value;
+//   let pValue = loginPassword.value;
+//   if((eValue.trim() !== '') && (pValue.trim() !== '')){
+//     login(eValue, pValue);
+//   }
+//   signUpPage.classList.remove('d-none');
+//   loginPage.classList.add('d-none');
+// })
 //註冊頁連結 click事件
-goLoginBtn.addEventListener('click', function (e) {
+goSignUpBtn.addEventListener('click', function (e) {
   e.preventDefault();
-  signUpPage.classList.remove('d-none');
+  signupPage.classList.remove('d-none');
   loginPage.classList.add('d-none');
 });
+
 // signUpBtn.addEventListener('click', (e) => {
 //   e.preventDefault();
 //   let eValue = signUpEmail.value
